@@ -1,0 +1,135 @@
+@font-face {
+  font-family: BBold;
+  src:url("../../assets/fonts/BlenderPro-Bold.woff2");
+}
+@font-face {
+  font-family: BBook;
+  src:url("../../assets/fonts/BlenderPro-Book.woff2");
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  right: 80px;
+  top: 20px;
+
+
+  &::after {
+    margin-left: 20px;
+    content: '';
+    position: absolute;
+    width: 520px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #FCEE0AFF;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+
+  .menu_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .category {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      li {
+        position: relative;
+
+        a {
+          font-family: BBook, sans-serif;
+          font-size: 19px;
+          text-decoration: none;
+          color: white;
+          padding: 0 15px;
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          &.main-menu-item-open {
+            color: black;
+          }
+
+          &:hover {
+            color: black;
+          }
+        }
+
+        &.has-dropdown {
+          padding: 10px 0;
+
+          &.open {
+            a {
+              &.main-menu-item-open {
+                color: black;
+              }
+            }
+          }
+
+          &:hover {
+            background-color: #00f0ff;
+            color: black;
+
+            .submenu {
+              display: block;
+            }
+          }
+
+          .submenu {
+            display: none;
+          }
+        }
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid #00f0ff;
+        backdrop-filter: blur(10px);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 160px;
+
+        li {
+          a {
+            text-transform: uppercase;
+            color: white;
+            padding: 15px 10px;
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+              color: #00f0ff;
+            }
+          }
+        }
+      }
+    }
+    .buy-now-btn {
+      font-family: BBold, sans-serif;
+      font-size: 18px;
+      margin-left: 10px;
+      padding: 10px 40px;
+      background-color: #00f0ff;
+      color: black;
+      border: none;
+      cursor: pointer;
+      text-decoration: none !important;;
+    }
+
+  }
+}
+
+
+

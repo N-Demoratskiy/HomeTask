@@ -1,0 +1,20 @@
+.menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 10; }
+  .menu .menu_list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .menu .menu_list .category {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .menu .menu_list .category li {
+        margin: 0 10px; }
+      .menu .menu_list .category a {
+        text-decoration: none;
+        color: black; }
+
+/*# sourceMappingURL=menu.css.map */
